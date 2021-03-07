@@ -13,11 +13,12 @@ function App() {
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
-      setSessionToken(localStorage.getItem('token2'));
+      setSessionToken(localStorage.getItem('token'));
     }
   }, [])
 
   const updateToken = (newToken) => {
+    console.log(newToken);
     localStorage.setItem('token', newToken);
     setSessionToken(newToken);
     console.log(sessionToken)
